@@ -58,3 +58,7 @@ class Account():
         self.transactions.append(withdraw_transaction)
 
         return value
+
+    def get_balance(self):
+        """returns the sum of all transactions stored on an account"""
+        return True

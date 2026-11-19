@@ -86,3 +86,9 @@ def test_withdraw_add_transaction_with_correct_value():
     assert len(account.transactions) == 1
     assert isinstance(account.transactions[0],Transaction)
     assert account.transactions[0].amount == -100
+
+def test_get_balance_exists():
+    """Test that get_balance can be called on an account"""
+    account = Account()
+
+    assert account.get_balance()
