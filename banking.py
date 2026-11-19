@@ -31,4 +31,4 @@ class Account():
     without any arguments."""
 
     def deposit(self,amount):
-        return self
+        return abs(amount)
