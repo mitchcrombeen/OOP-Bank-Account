@@ -92,3 +92,12 @@ def test_get_balance_returns_0_given_an_empty_transactions_list():
     account = Account()
 
     assert account.get_balance() == 0
+
+def test_get_balance_returns_100_given_one_deposit_of_100():
+    """If an account has one deposit of 100, get_balance should return 100"""
+    account = Account()
+    account.deposit(100)
+
+    balance = account.get_balance()
+
+    assert balance == 100

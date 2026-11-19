@@ -64,4 +64,6 @@ class Account():
         if not self.transactions:
             return 0
 
-        return True
+        balance = self.transactions[0].amount
+
+        return balance
