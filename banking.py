@@ -29,4 +29,6 @@ class Transaction:
 class Account():
     """The account class represents a bank account. It is constructed
     without any arguments."""
-    pass
+
+    def deposit(self):
+        return self

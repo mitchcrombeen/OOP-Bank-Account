@@ -58,3 +58,8 @@ def test_transaction_str_method_can_represent_negative_amounts():
 def test_class_account_exists():
     account = Account()
     assert account
+
+def test_class_has_deposit_method():
+    account = Account()
+
+    assert account.deposit()
