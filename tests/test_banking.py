@@ -42,3 +42,13 @@ def test_transaction_has_str_method_which_returns_string_with_amount_and_timesta
     expected_output = '2026-11-19: +$1,000,000.00'
 
     assert str(transaction) == expected_output
+
+def test_transaction_str_method_can_represent_negative_amounts():
+    """Test that when __str__ is called on a negative amount, the sign change is
+    reflected in the output string"""
+
+    uhoh = Transaction(-1000000, dt.datetime(2026, 11, 19))
+
+    expected_output = '2026-11-19: -$1,000,000.00'
+
+    assert str(uhoh) == expected_output

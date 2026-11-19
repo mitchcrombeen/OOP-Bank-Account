@@ -15,4 +15,11 @@ class Transaction:
 
     def __str__(self) -> str:
         """returns a string including the timestamp and amount"""
-        return f'{self.timestamp.date()}: +${self.amount:,.2f}'
+        #check if the transaction is positive or negative
+        sign = '+'
+        if self.amount <0:
+            sign = '-'
+
+        #format string with date only and amount in common currency formatting
+        return f'{self.timestamp.date()}: {sign}${abs(self.amount):,.2f}'
+
