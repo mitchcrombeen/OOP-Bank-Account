@@ -3,3 +3,4 @@
 class Transaction:
     def __init__(self,amount):
         """Initialize transaction instances with an amount parameter"""
+        self.amount = amount
