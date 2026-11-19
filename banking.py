@@ -44,3 +44,11 @@ class Account():
         self.transactions.append(deposit_transaction)
 
         return value
+
+    def withdraw(self,amount):
+        """Accepts a single parameter, amount, converts it to a negative value,
+        then creates a transaction with that value and adds it to the transactions list"""
+        #convert amount to a negative value
+        value = -abs(amount)
+
+        return value

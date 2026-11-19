@@ -69,3 +69,9 @@ def test_deposit_adds_transaction():
     assert isinstance(account.transactions[0], Transaction)
     assert account.transactions[0].amount == 100
 
+def test_withdraw_converts_amount_to_negative_value():
+    """test withdraw accepts a single parameter, amount, and converts it to a
+    negative value"""
+    account = Account()
+
+    assert account.withdraw(100) == -100
