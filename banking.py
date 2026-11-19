@@ -34,6 +34,8 @@ class Account():
         self.transactions = []
 
     def deposit(self,amount):
+        """Accepts a single parameter, amount, converts it to a positive value,
+        then creates a transaction with that value and adds it to the transactions list"""
         #convert amount to a positive value
         value = abs(amount)
 

@@ -56,11 +56,14 @@ def test_transaction_str_method_can_represent_negative_amounts():
     assert str(uhoh) == expected_output
 
 def test_deposit_converts_amount_to_positive_value():
+    """given a negative amount, deposit converts it to a positive value"""
     account = Account()
 
     assert account.deposit(-1) == 1
 
 def test_deposit_adds_transaction():
+    """test deposit creates a transaction with the converted value and adds it
+    to the transactions list"""
     account = Account()
 
     account.deposit(100)
