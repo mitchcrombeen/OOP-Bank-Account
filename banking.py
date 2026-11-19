@@ -51,4 +51,10 @@ class Account():
         #convert amount to a negative value
         value = -abs(amount)
 
+        #create a transaction
+        withdraw_transaction = Transaction(value)
+
+        #add the transaction to the transactions list
+        self.transactions.append(withdraw_transaction)
+
         return value

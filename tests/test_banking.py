@@ -75,3 +75,14 @@ def test_withdraw_converts_amount_to_negative_value():
     account = Account()
 
     assert account.withdraw(100) == -100
+
+def test_withdraw_add_transaction_with_correct_value():
+    """test withdraw creates a transaction with the converted value and adds it
+    to the transactions list"""
+    account = Account()
+
+    account.withdraw(100)
+
+    assert len(account.transactions) == 1
+    assert isinstance(account.transactions[0],Transaction)
+    assert account.transactions[0].amount == -100
