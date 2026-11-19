@@ -29,6 +29,18 @@ class Transaction:
 class Account():
     """The account class represents a bank account. It is constructed
     without any arguments."""
+    def __init__(self):
+        """Accounts should be initialized with an empty transactions list"""
+        self.transactions = []
 
     def deposit(self,amount):
-        return abs(amount)
+        #convert amount to a positive value
+        value = abs(amount)
+
+        #create a transaction with the converted value
+        deposit_transaction = Transaction(value)
+
+        #add the transaction to the transactions list
+        self.transactions.append(deposit_transaction)
+
+        return value

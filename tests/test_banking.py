@@ -60,3 +60,9 @@ def test_deposit_converts_amount_to_positive_value():
 
     assert account.deposit(-1) == 1
 
+def test_deposit_adds_transaction():
+    account = Account()
+
+    account.deposit(100)
+
+    assert len(account.transactions) == 1
