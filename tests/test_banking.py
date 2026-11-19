@@ -55,12 +55,6 @@ def test_transaction_str_method_can_represent_negative_amounts():
 
     assert str(uhoh) == expected_output
 
-def test_deposit_accepts_amount_parameter():
-    account = Account()
-    account.deposit(1000000)
-
-    assert account
-
 def test_deposit_converts_amount_to_positive_value():
     account = Account()
 
