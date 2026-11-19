@@ -25,3 +25,8 @@ class Transaction:
 
         #format string with date only and amount in common currency formatting
         return f'{self.timestamp.date()}: {sign}${abs(self.amount):,.2f}'
+
+class Account():
+    """The account class represents a bank account. It is constructed
+    without any arguments."""
+    pass

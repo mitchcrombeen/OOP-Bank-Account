@@ -2,7 +2,7 @@
 
 import datetime as dt
 from banking import Transaction
-
+from banking import Account
 
 
 def test_transaction_class_stores_amount():
@@ -54,3 +54,7 @@ def test_transaction_str_method_can_represent_negative_amounts():
     expected_output = '2026-11-19: -$1,000,000.00'
 
     assert str(uhoh) == expected_output
+
+def test_class_account_exists():
+    account = Account()
+    assert account
