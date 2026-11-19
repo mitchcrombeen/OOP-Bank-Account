@@ -61,4 +61,7 @@ class Account():
 
     def get_balance(self):
         """returns the sum of all transactions stored on an account"""
+        if not self.transactions:
+            return 0
+
         return True
