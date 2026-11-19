@@ -2,6 +2,9 @@
 import datetime as dt
 
 class Transaction:
+    """A transaction class represents a monetary transaction event. It has two
+    properties: an amount, and a timestamp."""
+
     def __init__(self,amount,timestamp=None):
         """Initialize transaction instances with an amount parameter"""
         self.amount = amount
@@ -22,4 +25,3 @@ class Transaction:
 
         #format string with date only and amount in common currency formatting
         return f'{self.timestamp.date()}: {sign}${abs(self.amount):,.2f}'
-

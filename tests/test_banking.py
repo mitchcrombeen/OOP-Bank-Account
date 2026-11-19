@@ -1,6 +1,8 @@
 """Test functionality of the account and transaction classes and their methods"""
-from banking import Transaction
+
 import datetime as dt
+from banking import Transaction
+
 
 
 def test_transaction_class_stores_amount():
