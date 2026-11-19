@@ -101,3 +101,16 @@ def test_get_balance_returns_100_given_one_deposit_of_100():
     balance = account.get_balance()
 
     assert balance == 100
+
+def test_get_balance_returns_correct_sum_given_multiple_transactions():
+    """If an account has transactions of deposit 100, withdraw 50, deposit 10,
+    get_balance should return 60"""
+    account = Account()
+
+    account.deposit(100)
+    account.withdraw(50)
+    account.deposit(10)
+
+    balance = account.get_balance()
+
+    assert balance == 60

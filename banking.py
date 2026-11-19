@@ -64,6 +64,6 @@ class Account():
         if not self.transactions:
             return 0
 
-        balance = self.transactions[0].amount
+        balance = sum(t.amount for t in self.transactions)
 
         return balance
