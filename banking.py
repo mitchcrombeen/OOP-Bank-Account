@@ -12,3 +12,7 @@ class Transaction:
     def __repr__(self):
         """returns an expression which could be used to recreate this object"""
         return f'Transaction({self.amount},{repr(self.timestamp)})'
+
+    def __str__(self) -> str:
+        """returns a string including the timestamp and amount"""
+        return f'{self.timestamp.date()}: +${self.amount:,.2f}'

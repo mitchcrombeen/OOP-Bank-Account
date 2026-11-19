@@ -34,4 +34,11 @@ def test_transaction_has_a_repr_method_that_returns_an_appropriate_str():
 
     assert repr(transaction) == expected_output
 
+def test_transaction_has_str_method_which_returns_string_with_amount_and_timestamp():
+    """test that Transaction has a __str__ method which returns a string
+    containing the timestamp and amount"""
+    transaction = Transaction(1000000, dt.datetime(2026, 11, 19))
 
+    expected_output = '2026-11-19: +$1,000,000.00'
+
+    assert str(transaction) == expected_output
