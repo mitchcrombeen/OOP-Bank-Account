@@ -30,5 +30,5 @@ class Account():
     """The account class represents a bank account. It is constructed
     without any arguments."""
 
-    def deposit(self):
+    def deposit(self,amount):
         return self

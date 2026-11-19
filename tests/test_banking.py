@@ -62,4 +62,10 @@ def test_class_account_exists():
 def test_class_has_deposit_method():
     account = Account()
 
-    assert account.deposit()
+    assert account.deposit(1)
+
+def test_deposit_accepts_amount_parameter():
+    account = Account()
+    account.deposit(1000000)
+
+    assert account
