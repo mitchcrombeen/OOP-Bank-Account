@@ -66,3 +66,6 @@ def test_deposit_adds_transaction():
     account.deposit(100)
 
     assert len(account.transactions) == 1
+    assert isinstance(account.transactions[0], Transaction)
+    assert account.transactions[0].amount == 100
+
