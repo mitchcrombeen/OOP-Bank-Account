@@ -24,3 +24,14 @@ def test_transaction_uses_current_datetiime_if_none_is_provided():
     time_after = dt.datetime.now()
 
     assert time_before <= transaction.timestamp <= time_after
+
+def test_transaction_has_a_repr_method_that_returns_an_appropriate_str():
+    """__repr__ returns a string that could be used to create a similar transaction"""
+    transaction = Transaction(100,dt.datetime(2026,11,19))
+
+    #created on separate line do to the length of text
+    expected_output = 'Transaction(100,datetime.datetime(2026, 11, 19, 0, 0))'
+
+    assert repr(transaction) == expected_output
+
+

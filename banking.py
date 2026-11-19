@@ -8,3 +8,7 @@ class Transaction:
         if timestamp is None:
             timestamp = dt.datetime.now()
         self.timestamp = timestamp
+
+    def __repr__(self):
+        """returns an expression which could be used to recreate this object"""
+        return f'Transaction({self.amount},{repr(self.timestamp)})'
